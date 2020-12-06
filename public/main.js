@@ -2,12 +2,12 @@ var data_to_rasp = {
   "tarX": -1,
   "tarY": -1,
   "mode": "",
-  "lift_land": false,
+  "lift": false,
   "emergency_stop": false,
-  "translation_P_gain": 0,
-  "translation_D_gain": 0,
-  "yaw_P_gain": 0,
-  "yaw_D_gain": 0,
+  "translation_P_gain": 15.0 * 127.0/2500.0,
+  "translation_D_gain": 2.0,
+  "yaw_P_gain": -10.0,
+  "yaw_D_gain": -4.0,
   "command": "",
   "arg1": 0,
   "arg2": 0
@@ -22,22 +22,40 @@ function sendValues()
 }
 
 
-/***** DISTANCE SLIDER *****/
+/***** SLIDERS *****/
 // get slider reference from DOM
-var distance_slider = document.getElementById("distance-slider");
-var distance_label = document.getElementById("distance-label");
+var arg1_slider = document.getElementById("arg1_slider");
+var arg1_label = document.getElementById("arg1_label");
 
 // initialize slider
-distance_slider.min = 100;
-distance_slider.max = 300;
-distance_slider.value = 100;
-var distance_prefix = "Distance: ";
-distance_label.innerHTML = distance_prefix + distance_slider.value/100;
+arg1_slider.min = -1000;
+arg1_slider.max = 1000;
+arg1_slider.value = 0;
+var arg1_prefix = "arg1: ";
+arg1_label.innerHTML = arg1_prefix + arg1_slider.value;
 
 // slider functionality
-distance_slider.oninput = function() {
-    data_to_rasp["arg1"] = Number(this.value / 100);
-    distance_label.innerHTML = distance_prefix + data_to_rasp["arg1"];
+arg1_slider.oninput = function() {
+    data_to_rasp["arg1"] = Number(this.value);
+    arg1_label.innerHTML = arg1_prefix + data_to_rasp["arg1"];
+    sendValues();
+}
+
+// get slider reference from DOM
+var arg2_slider = document.getElementById("arg2_slider");
+var arg2_label = document.getElementById("arg2_label");
+
+// initialize slider
+arg2_slider.min = -1000;
+arg2_slider.max = 1000;
+arg2_slider.value = 0;
+var arg2_prefix = "arg2: ";
+arg2_label.innerHTML = arg2_prefix + arg2_slider.value;
+
+// slider functionality
+arg2_slider.oninput = function() {
+    data_to_rasp["arg2"] = Number(this.value);
+    arg2_label.innerHTML = arg2_prefix + data_to_rasp["arg2"];
     sendValues();
 }
 /*********************/
@@ -45,42 +63,58 @@ distance_slider.oninput = function() {
 /***** CHECKBOXES *****/
 // get references from DOM
 var lift_box = document.getElementById("lift");
+var emergency_stop_box = document.getElementById("emergency_stop");
 
 // initialize boxes
 lift_box.checked = false;
+emergency_stop_box.checked = false;
 
 lift_box.onchange = function ()
 {
-    data_to_rasp["lift_land"] = lift_box.checked;
+    data_to_rasp["lift"] = lift_box.checked; 
+    sendValues();
+}
+
+emergency_stop_box.onchange = function ()
+{
+    data_to_rasp["emergency_stop"] = emergency_stop_box.checked; 
     sendValues();
 }
 
 /***** BUTTONS *****/
-var forward_btn = document.getElementById("forward-btn");
-var backward_btn = document.getElementById("backward-btn");
-var left_btn = document.getElementById("left-btn");
-var right_btn = document.getElementById("right-btn");
+var move_rel_btn = document.getElementById("move_rel_btn");
+var move_abs_btn = document.getElementById("move_abs_btn");
+var rotate_rel_btn = document.getElementById("rotate_rel_btn");
+var rotate_abs_btn = document.getElementById("rotate_abs_btn");
+var nop_btn = document.getElementById("nop_btn");
 
-forward_btn.onclick = function ()
+move_rel_btn.onclick = function ()
 {
-    data_to_rasp["command"] = "forward"
+    data_to_rasp["command"] = "move_rel"
+    console.log("move_rel")
     sendValues();
 }
 
-backward_btn.onclick = function ()
+move_abs_btn.onclick = function ()
 {
-    data_to_rasp["command"] = "backward"
+    data_to_rasp["command"] = "move_abs"
     sendValues();
 }
 
-left_btn.onclick = function ()
+rotate_rel_btn.onclick = function ()
 {
-    data_to_rasp["command"] = "left"
+    data_to_rasp["command"] = "rotate_rel"
     sendValues();
 }
 
-right_btn.onclick = function ()
+rotate_abs_btn.onclick = function ()
 {
-    data_to_rasp["command"] = "right"
+    data_to_rasp["command"] = "rotate_abs"
+    sendValues();
+}
+
+rotate_abs_btn.onclick = function ()
+{
+    data_to_rasp["command"] = "nop"
     sendValues();
 }

@@ -1,18 +1,19 @@
 var data_from_rasp = {};
-var data_to_rasp = {
-    "tarX": -1,
-    "tarY": -1,
-    "mode": "",
-    "lift_land": false,
-    "emergency_stop": false,
-    "translation_P_gain": 0,
-    "translation_D_gain": 0,
-    "yaw_P_gain": 0,
-    "yaw_D_gain": 0,
-    "command": "",
-    "arg1": 0,
-    "arg2": 0
-};
+var data_to_rasp = ""
+// var data_to_rasp = {
+//     "tarX": -1,
+//     "tarY": -1,
+//     "mode": "",
+//     "lift": false,
+//     "emergency_stop": false,
+//     "translation_P_gain": 0,
+//     "translation_D_gain": 0,
+//     "yaw_P_gain": 0,
+//     "yaw_D_gain": 0,
+//     "command": "",
+//     "arg1": 0,
+//     "arg2": 0
+// };
 
 //////////// EXPRESS //////////// 
 const express = require('express')
@@ -27,8 +28,8 @@ app.get('/rpi-data', (req, res) => {
 });
 
 app.post('/update-cmd', (req, res) => {
+    //data_to_rasp = JSON.stringify(req.body);
     data_to_rasp = JSON.stringify(req.body);
-    console.log(data_to_rasp);
     res.send("");
 });
 
@@ -62,8 +63,8 @@ wsServer.on('request', function(request) {
             // process WebSocket message
             //console.log(message.utf8Data);
             data_from_rasp = JSON.parse(message.utf8Data);
-            console.log("Python: data recived. Sending data");
-            connection.send(JSON.stringify(data_to_rasp))
+            //connection.send(JSON.stringify(data_to_rasp))
+            connection.send(data_to_rasp)
         }
     });
 

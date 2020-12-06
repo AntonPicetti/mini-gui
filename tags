@@ -1,0 +1,70 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/antonpicetti/Dropbox/draft/mini-gui/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/97c3b917/
+AnonymousFunctionde0f12e70100	server.js	/^var server_py = http_py.createServer(function(request, response) {$/;"	f
+AnonymousFunctionde0f12e70200	server.js	/^server_py.listen(4000, function() { $/;"	f
+AnonymousFunctionde0f12e70300	server.js	/^wsServer.on('request', function(request) {$/;"	f
+AnonymousFunctionde0f12e70400	server.js	/^    connection.on('message', function(message) {$/;"	f
+AnonymousFunctionde0f12e70500	server.js	/^    connection.on('close', function(connection) {$/;"	f
+Hovercraft Interface	public/index.html	/^        <h1>Hovercraft Interface<\/h1>$/;"	h
+app	server.js	/^const app = express()$/;"	C
+arg1	public/main.js	/^  "arg1": 0,$/;"	p	class:data_to_rasp
+arg1_label	public/index.html	/^        <p id="arg1_label"><\/p>$/;"	I
+arg1_label	public/main.js	/^var arg1_label = document.getElementById("arg1_label");$/;"	v
+arg1_prefix	public/main.js	/^var arg1_prefix = "arg1: ";$/;"	v
+arg1_slider	public/index.html	/^        <input type="range" width="500px" class="slider" id="arg1_slider">$/;"	I
+arg1_slider	public/main.js	/^var arg1_slider = document.getElementById("arg1_slider");$/;"	v
+arg2	public/main.js	/^  "arg2": 0$/;"	p	class:data_to_rasp
+arg2_label	public/index.html	/^        <p id="arg2_label"><\/p>$/;"	I
+arg2_label	public/main.js	/^var arg2_label = document.getElementById("arg2_label");$/;"	v
+arg2_prefix	public/main.js	/^var arg2_prefix = "arg2: ";$/;"	v
+arg2_slider	public/index.html	/^        <input type="range" width="500px" class="slider" id="arg2_slider">$/;"	I
+arg2_slider	public/main.js	/^var arg2_slider = document.getElementById("arg2_slider");$/;"	v
+command	public/main.js	/^  "command": "",$/;"	p	class:data_to_rasp
+data_from_rasp	server.js	/^var data_from_rasp = {};$/;"	v
+data_to_rasp	public/main.js	/^var data_to_rasp = {$/;"	c
+data_to_rasp	server.js	/^var data_to_rasp = ""$/;"	v
+emergency_stop	public/index.html	/^        <input type="checkbox" id="emergency_stop">Emergency Stop<\/input>$/;"	I
+emergency_stop	public/main.js	/^  "emergency_stop": false,$/;"	p	class:data_to_rasp
+emergency_stop_box	public/main.js	/^var emergency_stop_box = document.getElementById("emergency_stop");$/;"	v
+express	server.js	/^const express = require('express')$/;"	C
+http_py	server.js	/^var http_py = require('http');$/;"	v
+lift	public/index.html	/^        <input type="checkbox" id="lift">Lift<\/input>$/;"	I
+lift	public/main.js	/^  "lift": false,$/;"	p	class:data_to_rasp
+lift_box	public/main.js	/^var lift_box = document.getElementById("lift");$/;"	v
+mode	public/main.js	/^  "mode": "",$/;"	p	class:data_to_rasp
+move_abs_btn	public/index.html	/^        <button id="move_abs_btn">Move Absolute<\/button>$/;"	I
+move_abs_btn	public/main.js	/^var move_abs_btn = document.getElementById("move_abs_btn");$/;"	v
+move_rel_btn	public/index.html	/^        <button id="move_rel_btn">Move Relative<\/button>$/;"	I
+move_rel_btn	public/main.js	/^var move_rel_btn = document.getElementById("move_rel_btn");$/;"	v
+nop	public/index.html	/^        <button id="nop">NOP<\/button>$/;"	I
+nop_btn	public/main.js	/^var nop_btn = document.getElementById("nop_btn");$/;"	v
+onchange	public/main.js	/^emergency_stop_box.onchange = function ()$/;"	f	function:emergency_stop_box
+onchange	public/main.js	/^lift_box.onchange = function ()$/;"	f	function:lift_box
+onclick	public/main.js	/^move_abs_btn.onclick = function ()$/;"	f	function:move_abs_btn
+onclick	public/main.js	/^move_rel_btn.onclick = function ()$/;"	f	function:move_rel_btn
+onclick	public/main.js	/^rotate_abs_btn.onclick = function ()$/;"	f	function:rotate_abs_btn
+onclick	public/main.js	/^rotate_rel_btn.onclick = function ()$/;"	f	function:rotate_rel_btn
+oninput	public/main.js	/^arg1_slider.oninput = function() {$/;"	f	function:arg1_slider
+oninput	public/main.js	/^arg2_slider.oninput = function() {$/;"	f	function:arg2_slider
+port_exp	server.js	/^const port_exp = 3000$/;"	C
+rotate_abs_btn	public/index.html	/^        <button id="rotate_abs_btn">Rotate Absolute<\/button>$/;"	I
+rotate_abs_btn	public/main.js	/^var rotate_abs_btn = document.getElementById("rotate_abs_btn");$/;"	v
+rotate_rel_btn	public/index.html	/^        <button id="rotate_rel_btn">Rotate Relative<\/button>$/;"	I
+rotate_rel_btn	public/main.js	/^var rotate_rel_btn = document.getElementById("rotate_rel_btn");$/;"	v
+sendValues	public/main.js	/^function sendValues()$/;"	f
+server_py	server.js	/^var server_py = http_py.createServer(function(request, response) {$/;"	v
+tarX	public/main.js	/^  "tarX": -1,$/;"	p	class:data_to_rasp
+tarY	public/main.js	/^  "tarY": -1,$/;"	p	class:data_to_rasp
+translation_D_gain	public/main.js	/^  "translation_D_gain": 2.0,$/;"	p	class:data_to_rasp
+translation_P_gain	public/main.js	/^  "translation_P_gain": 15.0 * 127.0\/2500.0,$/;"	p	class:data_to_rasp
+wsServer	server.js	/^wsServer = new WebSocketServer({$/;"	v
+yaw_D_gain	public/main.js	/^  "yaw_D_gain": -4.0,$/;"	p	class:data_to_rasp
+yaw_P_gain	public/main.js	/^  "yaw_P_gain": -10.0,$/;"	p	class:data_to_rasp
