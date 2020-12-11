@@ -27,6 +27,8 @@ arg2_label	public/main.js	/^var arg2_label = document.getElementById("arg2_label
 arg2_prefix	public/main.js	/^var arg2_prefix = "arg2: ";$/;"	v
 arg2_slider	public/index.html	/^        <input type="range" width="500px" class="slider" id="arg2_slider">$/;"	I
 arg2_slider	public/main.js	/^var arg2_slider = document.getElementById("arg2_slider");$/;"	v
+auto_btn	public/index.html	/^        <button id="auto_btn">Auto<\/button>$/;"	I
+auto_btn	public/main.js	/^var auto_btn = document.getElementById("auto_btn");$/;"	v
 command	public/main.js	/^  "command": "",$/;"	p	class:data_to_rasp
 data_from_rasp	server.js	/^var data_from_rasp = {};$/;"	v
 data_to_rasp	public/main.js	/^var data_to_rasp = {$/;"	c
@@ -39,19 +41,25 @@ http_py	server.js	/^var http_py = require('http');$/;"	v
 lift	public/index.html	/^        <input type="checkbox" id="lift">Lift<\/input>$/;"	I
 lift	public/main.js	/^  "lift": false,$/;"	p	class:data_to_rasp
 lift_box	public/main.js	/^var lift_box = document.getElementById("lift");$/;"	v
+manual_btn	public/index.html	/^        <button id="manual_btn">Manual<\/button>$/;"	I
+manual_btn	public/main.js	/^var manual_btn = document.getElementById("manual_btn");$/;"	v
 mode	public/main.js	/^  "mode": "",$/;"	p	class:data_to_rasp
 move_abs_btn	public/index.html	/^        <button id="move_abs_btn">Move Absolute<\/button>$/;"	I
 move_abs_btn	public/main.js	/^var move_abs_btn = document.getElementById("move_abs_btn");$/;"	v
 move_rel_btn	public/index.html	/^        <button id="move_rel_btn">Move Relative<\/button>$/;"	I
 move_rel_btn	public/main.js	/^var move_rel_btn = document.getElementById("move_rel_btn");$/;"	v
-nop	public/index.html	/^        <button id="nop">NOP<\/button>$/;"	I
+nop_btn	public/index.html	/^        <button id="nop_btn">NOP<\/button>$/;"	I
 nop_btn	public/main.js	/^var nop_btn = document.getElementById("nop_btn");$/;"	v
 onchange	public/main.js	/^emergency_stop_box.onchange = function ()$/;"	f	function:emergency_stop_box
 onchange	public/main.js	/^lift_box.onchange = function ()$/;"	f	function:lift_box
+onclick	public/main.js	/^auto_btn.onclick = function ()$/;"	f	function:auto_btn
+onclick	public/main.js	/^manual_btn.onclick = function ()$/;"	f	function:manual_btn
 onclick	public/main.js	/^move_abs_btn.onclick = function ()$/;"	f	function:move_abs_btn
 onclick	public/main.js	/^move_rel_btn.onclick = function ()$/;"	f	function:move_rel_btn
+onclick	public/main.js	/^nop_btn.onclick = function ()$/;"	f	function:nop_btn
 onclick	public/main.js	/^rotate_abs_btn.onclick = function ()$/;"	f	function:rotate_abs_btn
 onclick	public/main.js	/^rotate_rel_btn.onclick = function ()$/;"	f	function:rotate_rel_btn
+onclick	public/main.js	/^semi_btn.onclick = function ()$/;"	f	function:semi_btn
 oninput	public/main.js	/^arg1_slider.oninput = function() {$/;"	f	function:arg1_slider
 oninput	public/main.js	/^arg2_slider.oninput = function() {$/;"	f	function:arg2_slider
 port_exp	server.js	/^const port_exp = 3000$/;"	C
@@ -59,6 +67,8 @@ rotate_abs_btn	public/index.html	/^        <button id="rotate_abs_btn">Rotate Ab
 rotate_abs_btn	public/main.js	/^var rotate_abs_btn = document.getElementById("rotate_abs_btn");$/;"	v
 rotate_rel_btn	public/index.html	/^        <button id="rotate_rel_btn">Rotate Relative<\/button>$/;"	I
 rotate_rel_btn	public/main.js	/^var rotate_rel_btn = document.getElementById("rotate_rel_btn");$/;"	v
+semi_btn	public/index.html	/^        <button id="semi_btn">Semi<\/button>$/;"	I
+semi_btn	public/main.js	/^var semi_btn = document.getElementById("semi_btn");$/;"	v
 sendValues	public/main.js	/^function sendValues()$/;"	f
 server_py	server.js	/^var server_py = http_py.createServer(function(request, response) {$/;"	v
 tarX	public/main.js	/^  "tarX": -1,$/;"	p	class:data_to_rasp

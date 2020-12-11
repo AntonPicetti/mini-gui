@@ -87,6 +87,9 @@ var move_abs_btn = document.getElementById("move_abs_btn");
 var rotate_rel_btn = document.getElementById("rotate_rel_btn");
 var rotate_abs_btn = document.getElementById("rotate_abs_btn");
 var nop_btn = document.getElementById("nop_btn");
+var manual_btn = document.getElementById("manual_btn");
+var semi_btn = document.getElementById("semi_btn");
+var auto_btn = document.getElementById("auto_btn");
 
 move_rel_btn.onclick = function ()
 {
@@ -113,8 +116,26 @@ rotate_abs_btn.onclick = function ()
     sendValues();
 }
 
-rotate_abs_btn.onclick = function ()
+nop_btn.onclick = function ()
 {
     data_to_rasp["command"] = "nop"
+    sendValues();
+}
+
+manual_btn.onclick = function ()
+{
+    data_to_rasp["mode"] = "manual"
+    sendValues();
+}
+
+semi_btn.onclick = function ()
+{
+    data_to_rasp["mode"] = "semi"
+    sendValues();
+}
+
+auto_btn.onclick = function ()
+{
+    data_to_rasp["mode"] = "auto"
     sendValues();
 }
